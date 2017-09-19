@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:oefOppervlakte"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="200
+        " Width="525">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="139*"></ColumnDefinition>
+            <ColumnDefinition Width="378*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblStraal" Content="Straal" Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" Margin="5,8" Height="26"></Label>
+        <TextBox Name="txtStraal" Grid.Column="1" Grid.Row="0" Margin="5" VerticalAlignment="Center"></TextBox>
+        <Button Name="btnBereken" Content="Bereken" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="5" Click="btnBereken_Click"></Button>
+        <Label Content="Omtrek:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="5,8" Height="26"></Label>
+        <Label Name="lblOmtrek" Grid.Row="2" Grid.Column="1" Margin="5"></Label>
+        <Label Content="Oppervlakte:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Margin="5,8,5,9" Height="26"></Label>
+        <Label Name="lblOpervlakte" Grid.Row="3" Grid.Column="1" Margin="5"></Label>
     </Grid>
 </Window>
