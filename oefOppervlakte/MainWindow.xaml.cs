@@ -34,21 +34,9 @@ namespace oefOppervlakte
                 MessageBox.Show("Gelieve een numeriek getal in te geven", "Fout!", MessageBoxButton.OK,MessageBoxImage.Error);
             } else
             {
-                lblOmtrek.Content = omtrekMet(straal);
-                lblOpervlakte.Content = oppervlakteMet(straal);
+                Cirkel cirkel = new Cirkel(straal);
+                lblOutput.Content = cirkel.ToString();
             }
-        }
-
-        private double omtrekMet(double straal)
-        {
-            double omtrek = 2 * straal * Math.PI;
-            return Math.Round(omtrek, 2);
-        }
-
-        private double oppervlakteMet(double straal)
-        {
-            double oppervlakte = straal * straal * Math.PI;
-            return Math.Round(oppervlakte, 2);
         }
     } 
 }
